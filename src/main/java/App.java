@@ -68,5 +68,37 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
+        post("/new/hero", (req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            String name = req.queryParams("name");
+            Integer age = Integer.parseInt(req.queryParams("age"));
+            String power = req.queryParams("power");
+            String weakness = req.queryParams("weakness");
+            Hero newHero = new Hero(name, age, power, weakness);
+            req.session().attribute("item", name);
+            model.put("item", req.session().attribute("item"));
+            model.put("newHero", newHero);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/new/member/:squadId", (req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            req.session().attribute("selected", req.params("squadId"));
+            model.put("selectedSquad", req.session().attribute("selectedSquad"));
+            model.put("item", 1);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/squad/new/:id", (req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            int id= Integer.parseInt(req.params(":id"));
+            Hero newMember = Hero.findById(id);
+            Squad newSquad = Squad.findBySquadId(1);
+            newSquad.setSquadMembers(newMember);
+            model.put("item", newMember.getName());
+            model.put("newHero", newSquad.getName());
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
     }
 }
