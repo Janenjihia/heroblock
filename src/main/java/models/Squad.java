@@ -3,15 +3,21 @@ package models;
 import java.util.ArrayList;
 
 public class Squad {
+    private final int squadId;
     private int SquadId;
     private static String squadName;
     private static int squadSize;
     private static String cause;
+    private static ArrayList<Hero> squadMembers = new ArrayList<>();
+    private static ArrayList<Squad> instances = new ArrayList<>();
 
     public Squad(String name, int size, String cause) {
         this.squadName = name;
         this.squadSize = size;
         this.cause = cause;
+        this.squadMembers = new ArrayList<>();
+        instances.add(this);
+        this.squadId = instances.size();
     }
 
     public static Squad setUpNewSquad() {
@@ -29,4 +35,12 @@ public class Squad {
     public static String getCause() {
         return cause;
     }
+    public static ArrayList<Squad> getInstances() {
+        return instances;
+    }
+
+    public static Squad findBySquadId(int id) {
+        return instances.get(id-1);
+    }
+
 }
