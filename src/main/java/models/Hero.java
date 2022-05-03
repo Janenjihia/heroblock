@@ -17,4 +17,9 @@ public class Hero {
     public static Hero setUpNewHero() {
         return  new Hero("Aces", 25, "Empathy", "kind");
     }
+
+    public String getName() {
+        return this.name;
+    }
+
 }
