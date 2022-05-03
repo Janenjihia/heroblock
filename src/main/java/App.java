@@ -27,6 +27,7 @@ public class App {
             model.put("heroes", heroes);
             return new ModelAndView(model, "hero.hbs");
         }, new HandlebarsTemplateEngine());
+
 //        Add route to allow us get hero by id
         get("/new/:id",(req, res) -> {
             Map<String, Object> model = new HashMap<>();
@@ -34,6 +35,12 @@ public class App {
             Hero foundHero = Hero.findById(idOfHero);
             model.put("hero", foundHero);
             return new ModelAndView(model, "more.hbs");
+        }, new HandlebarsTemplateEngine());
+
+//        Add route for squad form
+        get("/squad-form", (req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "squad-form.hbs");
         }, new HandlebarsTemplateEngine());
 
     }
