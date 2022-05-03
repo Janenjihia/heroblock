@@ -24,4 +24,16 @@ Hero hero =new Hero("Aces", 25, "Empathy", "kind");
     public void newHero_getName_String(){
         assertEquals("Aces", Hero.getName());
     }
+    @Test
+    public void newHero_getAge_Int(){
+        assertEquals(25, Hero.getAge());
+    }
+    @Test
+    public void newHero_getPower_String(){
+        assertEquals("Empathy", Hero.getPower());
+    }
+    @Test
+    public void newHero_getWeakness_String(){
+        assertEquals("kind", Hero.getWeakness());
+    }
 }

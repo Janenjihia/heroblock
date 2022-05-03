@@ -3,10 +3,11 @@ package models;
 import java.util.ArrayList;
 
 public class Hero {
-    private String name;
-    private int age;
-    private String power;
-    private String weakness;
+      private static String name;
+       private static int age;
+       private static String power;
+       private static String weakness;
+
     public Hero (String name, Integer age, String power, String weakness) {
         this.name = name;
         this.age = age;
@@ -18,8 +19,20 @@ public class Hero {
         return  new Hero("Aces", 25, "Empathy", "kind");
     }
 
-    public String getName() {
-        return this.name;
+    public static String getName() {
+        return name;
+    }
+
+    public static String getWeakness() {
+        return weakness;
+    }
+
+    public static String getPower() {
+        return power;
+    }
+
+    public static int getAge() {
+        return age;
     }
 
 }
