@@ -20,4 +20,16 @@ Squad squad=new Squad("Warriors", 5, "Fight corruption");
         Squad newSquad = Squad.setUpNewSquad();
         assertTrue(newSquad instanceof Squad);
     }
+    @Test
+    public void newSquad_getName_String(){
+        assertEquals("Warriors", Squad.getName());
+    }
+    @Test
+    public void newSquad_getSize_Int(){
+        assertEquals(5, Squad.getSize());
+    }
+    @Test
+    public void newSquad_getCause_String(){
+        assertEquals("Fight corruption", Squad.getCause());
+    }
 }
