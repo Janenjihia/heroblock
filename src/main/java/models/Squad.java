@@ -43,4 +43,12 @@ public class Squad {
         return instances.get(id-1);
     }
 
+    public ArrayList<Hero> getSquadMembers() {
+        return squadMembers;
+    }
+
+    public void setSquadMembers(Hero hero) {
+        squadMembers.add(hero);
+    }
+
 }
