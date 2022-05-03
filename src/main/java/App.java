@@ -1,3 +1,4 @@
+import models.Hero;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -19,5 +20,13 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "hero-form.hbs");
         }, new HandlebarsTemplateEngine());
+//Add route to allow us get all instances for hero
+        get("/hero", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Hero> heroes = Hero.getAllInstances();
+            model.put("heroes", heroes);
+            return new ModelAndView(model, "hero.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 }
