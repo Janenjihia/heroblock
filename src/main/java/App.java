@@ -81,6 +81,15 @@ public class App {
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
+
+        get("/new/:id",(req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfHero = Integer.parseInt(req.params(":id"));
+            Hero foundHero = Hero.findById(idOfHero);
+            model.put("hero", foundHero);
+            return new ModelAndView(model, "more.hbs");
+        }, new HandlebarsTemplateEngine());
+
         get("/new/member/:squadId", (req, res) ->{
             Map<String, Object> model = new HashMap<>();
             req.session().attribute("selected", req.params("squadId"));
