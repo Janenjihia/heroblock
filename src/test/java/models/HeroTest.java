@@ -33,7 +33,33 @@ Hero hero =new Hero("Aces", 25, "Empathy", "kind");
         assertEquals("Empathy", Hero.getPower());
     }
     @Test
-    public void newHero_getWeakness_String(){
+    public void newHero_getWeakness_String()
+    {
         assertEquals("kind", Hero.getWeakness());
     }
+
+    @Test
+    public void newHero_getAllInstances_true(){
+        Hero Hero = new Hero("Aces", 25, "Empathy", "kind");
+        Hero anotherHero = new Hero("Morio", 21, "Just", "alcoholic");
+        assertEquals(true, Hero.getAllInstances().contains(Hero));
+        assertEquals(true, Hero.getAllInstances(). contains(anotherHero));
+    }
+    @Test
+    public void newHero_getId_Int(){
+        Hero.clearAllHeroes();
+        Hero newHero = Hero.setUpNewHero();
+        Hero anotherHero = Hero.setUpNewHero();
+        Hero another1 = Hero.setUpNewHero();
+        assertEquals(3, another1.getId());
+    }
+    @Test
+    public void newHero_findById_id(){
+        Hero.clearAllHeroes();
+        Hero newHero = Hero.setUpNewHero();
+        Hero another = Hero.setUpNewHero();
+        assertEquals(2, Hero.findById(another.getId()).getId());
+    }
+
+
 }
