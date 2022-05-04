@@ -131,7 +131,6 @@ nav>ul li{
   padding-left: 1px
   background: rgba(0, 0, 0, 0.527);
   text-align: bottom;
-  animation: load 1s linear 1;
 }
 .hero-desc>h3{
   font-size: 3.4em;
@@ -158,7 +157,6 @@ nav>ul li{
 }
 .hero-btn:hover{
   background: rgba(255,255,255,0.8);
-  transition: all 0.2s ease;
   color: black;
 }
 .hero-btn::after{
@@ -176,7 +174,6 @@ nav>ul li{
   border-color:rgb(209,209,209);
   cursor: zoom-in;
   left: 92%;
-  transition: all 0.2s ease;
 }
 .hero-starts{
   width: 100%;
@@ -196,7 +193,6 @@ nav>ul li{
   margin-top: 10px;
   max-width: 100%;
   text-transform: uppercase;
-  transition: all 1s ease;
 }
 .hero-charts span{
   display: inline-block;
@@ -263,11 +259,9 @@ nav>ul li{
   color: dark;
   outline: none;
   display: run-in;
-  animation: formLd 1.2s linear 1;
   font-size: 1em;
 }
 .form>input[type=text]:nth-child(even){
-	animation: formLd 0.8s linear 1;
 }
 @keyframes formLd{
 	0%{width: 0%;border-color: green;box-shadow: 0px 2px 2px rgba(255,255,255,0.3);}
@@ -295,7 +289,6 @@ nav>ul li{
   margin-top: 20vh;
   transform: all 2s ease;
   text-align: center;
-  animation: successColor 1s linear 1;
 }
 .success h3 span{
   color: rgb(125, 255, 0);
