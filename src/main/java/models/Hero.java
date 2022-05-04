@@ -10,6 +10,7 @@ public class Hero {
        private static ArrayList<Hero> instances = new ArrayList();
        private int id;
 
+
     public Hero (String name, Integer age, String power, String weakness) {
         this.name = name;
         this.age = age;
@@ -52,6 +53,9 @@ public class Hero {
     }
     public static Hero setUpNewHero1() {
         return new Hero("exl", 35, "flavor", "last");
+    }
+    public static void clearAllHeroes(){
+        instances.clear();
     }
 
 }
