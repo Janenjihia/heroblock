@@ -24,6 +24,7 @@ public class Squad {
         return new Squad("Warriors", 5, "Fight corruption");
     }
 
+
     public static String getName() {
         return squadName;
     }
@@ -53,6 +54,10 @@ public class Squad {
 
     public void setSquadMembers(Hero hero) {
         squadMembers.add(hero);
+    }
+
+    public void clearAllSquadMembers() {
+        instances.clear();
     }
 
 }
