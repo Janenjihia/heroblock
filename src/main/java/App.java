@@ -9,8 +9,27 @@ import java.util.Map;
 
 import static spark.Spark.*;
 public class App {
+
     public static void main(String[] args) {
+
+
+//        public static void run() {
+//            ProcessBuilder processBuilder = new ProcessBuilder();
+//            int port;
+//            if (processBuilder.environment().get("PORT") != null) {
+//                port = Integer.parseInt(processBuilder.environment().get("PORT"));
+//            } else {
+//                port = 4567;
+//            }
+//
+//            port(port);
+
+
         staticFileLocation("/public");
+        Hero.setUpNewHero();
+        Hero.setUpNewHero1();
+        Squad.setUpNewSquad();
+        Squad.setUpNewSquad1();
 //Add root route
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();

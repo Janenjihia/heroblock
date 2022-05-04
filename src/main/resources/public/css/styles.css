@@ -15,7 +15,7 @@
 	padding: 40px 0;
 }
 .landing-page h2 a{
-	background: green;
+	background: blue;
 	color: white;
 	border-radius: 20px;
 }
@@ -123,7 +123,7 @@ nav>ul li{
   height: 60vh;
   overflow: hidden;
   padding-right: 1px;
-  background: url('/images/hero1.jpg');
+  background: url('/images/3.jpeg');
   background-position: top center;
   box-shadow: 0 0 20px rgb(24, 44, 13);
   animation: load1 0.8s linear 1;
@@ -138,7 +138,7 @@ nav>ul li{
   left: 5px;
   color: green;
   padding-top: 20px;
-  background: url('/images/hero.jpg');
+  background: url('/images/java1.jpg');
   padding-left: 1px
   background: rgba(0, 0, 0, 0.527);
   text-align: bottom;

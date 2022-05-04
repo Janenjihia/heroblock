@@ -50,4 +50,8 @@ public class Hero {
     public int getId() {
         return id;
     }
+    public static Hero setUpNewHero1() {
+        return new Hero("exl", 35, "flavor", "last");
+    }
+
 }

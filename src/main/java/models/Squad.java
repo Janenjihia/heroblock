@@ -43,6 +43,10 @@ public class Squad {
         return instances.get(id-1);
     }
 
+    public static Squad setUpNewSquad1() {
+        return new Squad("Avengers", 5, "Avenge injustices");
+    }
+
     public ArrayList<Hero> getSquadMembers() {
         return squadMembers;
     }
