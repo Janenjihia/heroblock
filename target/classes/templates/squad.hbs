@@ -1,0 +1,58 @@
+{{#partial "content"}}
+    <div class="landing-page">
+        <div class="page-l"></div>
+        <div class="page-r"></div>
+        <div class="squad">
+            <div id="newMember">
+                <p class="close">&Cross;</p>
+                <h2>Choose Squad Members</h2>
+                {{#each heroes}}
+                    <div class="hero-description">
+                        <small><img src="/images/hero2.jpeg" alt=""></small>
+                        <div class="hero-detail">
+                            <p>Name: {{name}}</p>
+                            <p>Power: {{power}}</p>
+                            <a class="btns" href="/squad/new/{{id}}">Add to Squad</a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        <h2>
+            <a class="btns" href="/squad-form">Create a Squad</a>
+            <br><br>
+            {{#if squads}}
+                 THE SQUADS
+            </h2>
+                {{#each squads}}
+                    <div class="squad-content">
+                        <img src="hero.jpg" alt="">
+                        <div>
+                            <h1>{{squadName}}</h1>
+                            <p>Id: {{squadId}}</p>
+                            <p>Target: {{cause}}</p>
+                            <p>Max capacity: {{size}}</p>
+                            <br><br>
+                            <h4>Members</h4>
+                            <a class="btns" href="/new/member/{{squadId}}">Bind Id</a>
+                            <button class="addMember add-btn">Add New Member</button>
+                            {{#each squadMembers}}
+                                <div class="member-cont">
+                                    <h4>Name: {{this.name}}</h4>
+                                    <h4>Power: {{power}}</h4>
+                                    <button class="btns">REMOVE</button>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                {{/each}}
+            {{else}}
+                <h2> create a Squad to proceed</h2>
+            {{/if}}
+        </div>
+    </div>
+{{/partial}}
+{{#partial "footer"}}
+    <script type="text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+{{/partial}}
+{{> layout.hbs}}

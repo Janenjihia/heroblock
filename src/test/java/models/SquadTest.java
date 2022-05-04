@@ -63,7 +63,7 @@ Squad squad=new Squad("Warriors", 5, "Fight corruption");
         Squad.clearAllSquadMembers();
         Squad.getSquadMembers().add(Hero);
         Squad.getSquadMembers().add(Hero);
-        assertEquals("warriors", Squad.getSquadMembers().get(0).getName());
+        assertEquals("warlord", Squad.getSquadMembers().get(0).getName());
     }
     @Test
     public void addMember_addMemberToSquad_Hero(){

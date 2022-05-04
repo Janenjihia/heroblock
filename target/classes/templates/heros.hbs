@@ -1,0 +1,23 @@
+{{#partial "contents"}}
+    <div class="landing-page">
+        <div class="page-l">
+        </div>
+        <div class="page-r">
+        </div>
+        <h2><a class="btns" href="/hero-form">Post your Hero</a><br><br>HEROES</h2>
+        <div class="heroes">
+            {{#each hero}}
+                <div class="hero-description">
+                    <p>Name: {{name}}</p>
+                    <p>Age: {{age}}</p>
+                    <p>Power: {{power}}</p>
+                    <p>Weakness: {{weakness}}</p>
+                    <p>Id: {{id}}</p>
+                    <a href="new/{{id}}" class="btns">See More</a>
+                    <a href="/squad" class="btns">Add{{name}} To Squad</a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
