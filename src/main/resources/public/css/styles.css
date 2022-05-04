@@ -68,17 +68,6 @@ html{
   scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar,
- #newMember::-webkit-scrollbar{
-  width: 5px;
-  background-color: rgb(0, 255, 255);
-}
-body::-webkit-scrollbar-thumb,
- #newMember::-webkit-scrollbar-thumb{
-  background-color: rgb(0, 0, 0);
-  border-radius: 30px;
-}
-
 header{
   position: absolute;
   top: 0px;
@@ -189,17 +178,6 @@ nav>ul li{
   left: 92%;
   transition: all 0.2s ease;
 }
-@keyframes load{
-  0%{right: -100vw;}
-  30%{right: -50vw;box-shadow: 5px 5px 20px rgb(0, 0, 0)}
-  70%{box-shadow: 0px 0px 20px rgb(255, 255, 255)}
-}
-@keyframes load1{
-  0%{right: -100vw;}
-  30%{right: -10vw;box-shadow: 5px 5px 20px rgb(0, 0, 0)}
-  70%{box-shadow: 0px 0px 20px rgb(255, 255, 255)}
-}
-
 .hero-starts{
   width: 100%;
   z-index: 4;
@@ -418,9 +396,6 @@ position: absolute;
   color: red;
   cursor: pointer;
 }
-.squad>div:nth-child(even){
-	animation: load 1s linear 1;
-}
 .squad-content{
   position: relative;
   display: inline-block;
@@ -433,8 +408,7 @@ position: absolute;
   margin-bottom: 10px;
   border-radius: 5px;
   text-align: left;
-  transition: all 2s ease;
-  animation: load1 0.5s linear 1;
+
 }
 .add-btn{
   background: green;
