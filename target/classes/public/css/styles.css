@@ -59,13 +59,7 @@ header{
   width: 100%;
 
 }
-.nav-hr{
-  border: 0.3px solid rgb(128, 128, 128);
-  box-shadow: 0 0 5px rgb(20,12,109);
-  position: absolute;
-  width: 100%;
-  top: 45px;
-}
+
 header img{
   height: 90px;
   position: relative;
@@ -86,20 +80,6 @@ nav>ul li{
   cursor: pointer;
 }
 
-
-.hero-img{
-  position: relative;
-  background size: cover;
-  z-index: 10;
-  width: 30%;
-  Right: 5px;
-  margin-top: 5vh;
-  height: 60vh;
-  overflow: hidden;
-  padding-right: 1px;
-
-
-}
 .hero-desc{
   width: 30%;
   height: 60vh;
@@ -286,19 +266,6 @@ nav>ul li{
   right: 100%;
   animation: success1 0.7s linear 1;
 }
-
-.heroes{
-  z-index: 4;
-  font-family: 'Tangerine', sans-serif;
-  text-align: center;
-  width: 100%;
-}
-.heroes>div:nth-child(even) {
-  background: rgba(0, 0, 0, 0.5);
-}
-.heroes>div:nth-child(odd) img {
-  background: rgb(0, 0, 0);
-}
 .hero-description{
   width: 500px;
   max-width: 90%;
@@ -314,30 +281,6 @@ nav>ul li{
   background: rgb(100,101,104);
 
   border-radius: 5px;
-}
-.hero-description img{
-position: absolute;
-  height: 70px;
-  background: rgb(13,34,66);
-  display: block;
-  padding: 5px 13px;
-  right: -20px;
-  border-radius: 5px;
-  z-index: 4;
-  animation: hero 1s linear 1;
-}
-.hero-description a{
-	background: rgb(13,34,66);
-	padding: 3px 20px;
-}
-@keyframes hero{
-  0%{left: -200px;}
-  20%{left: -200px;}
-  50%{left: -100px;}
-  65%{
-    left: -20px;
-    box-shadow: 0px 0px 10px rgb(62,96,156);
-  }
 }
 .hero-description button{
   background: rgb(62,96,156);
@@ -394,15 +337,6 @@ position: absolute;
   padding: 2px 20px;
 }
 
-@media only screen and (max-width: 500px){
-	.hero-img{
-		width: 100%;
-	}
-	.hero-desc{
-		width: 90%;
-		margin: 0px;
-		margin-top: -50%;
-	}
 }
 .squad{
   z-index: 4;
